@@ -19,7 +19,7 @@ def preprocess_image(image):
     return image_flattened
 
 def extract_features(image):
-    image_pil = Image.fromarray(image) 
+    image_pil = Image.fromarray(image)
     features = img2vec.get_vec(image_pil)
     return features
 
@@ -30,11 +30,9 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     file = request.files['image']
-    
     image = cv2.imdecode(np.frombuffer(file.read(), np.uint8), cv2.IMREAD_COLOR)
     features = extract_features(image).reshape(1, -1)
     prediction = model.predict(features)
-    
     return redirect(url_for('output', value=int(prediction[0])))
 
 @app.route('/output')
