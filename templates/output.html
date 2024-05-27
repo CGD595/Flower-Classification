@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Output Page</title>
+</head>
+<body>
+
+{% if value == 0 %}
+    <p>It is a Rose</p>
+
+{% elif value == 1 %}
+    <p>It is a Daisy</p>
+
+{% elif value == 2 %}
+    <p>It is a Tulip</p>
+
+{% elif value == 3 %}
+    <p>It is a Dandelion</p>
+
+{% elif value == 4 %}
+    <p>It is a Sunflower</p>
+    
+{% else %}
+    <p>Not Recognized</p>
+{% endif %}
+
+</body>
+</html>
