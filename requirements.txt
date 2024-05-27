@@ -1,0 +1,8 @@
+Flask==2.0.2
+joblib==1.2.0
+numpy==1.23.5
+opencv-python-headless==4.5.5.64
+Pillow==9.0.1
+torch==1.10.2
+torchvision==0.11.3
+img2vec-pytorch==0.2.5
